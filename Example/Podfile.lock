@@ -1,0 +1,16 @@
+PODS:
+  - DProperty (0.0.2)
+  - JRSwizzle (1.0)
+  - UIView+TKGeometry (0.2)
+
+DEPENDENCIES:
+  - DProperty
+  - JRSwizzle
+  - UIView+TKGeometry
+
+SPEC CHECKSUMS:
+  DProperty: 2a0f2a805ca6b1528262efa964baaca1a444defd
+  JRSwizzle: 30da7a2c539a4ebf954b16d15f6dd8221c9f6fa5
+  UIView+TKGeometry: 60a88dcf2af8420175cb1c789a02d6254ebb89a7
+
+COCOAPODS: 0.33.1

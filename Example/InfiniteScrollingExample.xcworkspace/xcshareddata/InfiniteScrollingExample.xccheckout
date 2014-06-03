@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>98B6BF95-904E-42B6-AA64-8F7F5CFDB3ED</string>
+	<key>IDESourceControlProjectName</key>
+	<string>InfiniteScrollingExample</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>7294391F-9916-4BA0-A448-9B5BC8AE6EF1</key>
+		<string>ssh://github.com/ziryanov/CCInfiniteScrolling.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Example/InfiniteScrollingExample.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>7294391F-9916-4BA0-A448-9B5BC8AE6EF1</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/ziryanov/CCInfiniteScrolling.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>7294391F-9916-4BA0-A448-9B5BC8AE6EF1</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>7294391F-9916-4BA0-A448-9B5BC8AE6EF1</string>
+			<key>IDESourceControlWCCName</key>
+			<string>CCInfiniteScrolling</string>
+		</dict>
+	</array>
+</dict>
+</plist>

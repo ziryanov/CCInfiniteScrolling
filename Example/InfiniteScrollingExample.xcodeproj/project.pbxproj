@@ -1,0 +1,541 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2F9303660FB64EDF92CE2D6C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DA2E046B865343EDB424210D /* libPods.a */; };
+		61141F30193DF88700475851 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61141F2F193DF88700475851 /* Foundation.framework */; };
+		61141F32193DF88700475851 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61141F31193DF88700475851 /* CoreGraphics.framework */; };
+		61141F34193DF88700475851 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61141F33193DF88700475851 /* UIKit.framework */; };
+		61141F3A193DF88700475851 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 61141F38193DF88700475851 /* InfoPlist.strings */; };
+		61141F3C193DF88700475851 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 61141F3B193DF88700475851 /* main.m */; };
+		61141F40193DF88700475851 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 61141F3F193DF88700475851 /* AppDelegate.m */; };
+		61141F42193DF88700475851 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61141F41193DF88700475851 /* Images.xcassets */; };
+		61141F49193DF88700475851 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61141F48193DF88700475851 /* XCTest.framework */; };
+		61141F4A193DF88700475851 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61141F2F193DF88700475851 /* Foundation.framework */; };
+		61141F4B193DF88700475851 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61141F33193DF88700475851 /* UIKit.framework */; };
+		61141F53193DF88700475851 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 61141F51193DF88700475851 /* InfoPlist.strings */; };
+		61141F55193DF88700475851 /* InfiniteScrollingExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 61141F54193DF88700475851 /* InfiniteScrollingExampleTests.m */; };
+		61141F60193DF8FB00475851 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61141F5E193DF8FB00475851 /* Main.storyboard */; };
+		61141F65193DF90700475851 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61141F62193DF90700475851 /* FirstViewController.m */; };
+		61141F66193DF90700475851 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61141F64193DF90700475851 /* SecondViewController.m */; };
+		61141F6A193DF91800475851 /* UIScrollView+infiniteScrolling.m in Sources */ = {isa = PBXBuildFile; fileRef = 61141F69193DF91800475851 /* UIScrollView+infiniteScrolling.m */; };
+		61FF1B9E193E12E1003532E0 /* CCInfiniteScrolling.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 61FF1B9D193E12E1003532E0 /* CCInfiniteScrolling.bundle */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		61141F4C193DF88700475851 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 61141F24193DF88700475851 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 61141F2B193DF88700475851;
+			remoteInfo = InfiniteScrollingExample;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		32374C4429524554B1D5A36B /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		61141F2C193DF88700475851 /* InfiniteScrollingExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InfiniteScrollingExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		61141F2F193DF88700475851 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		61141F31193DF88700475851 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		61141F33193DF88700475851 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		61141F37193DF88700475851 /* InfiniteScrollingExample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "InfiniteScrollingExample-Info.plist"; sourceTree = "<group>"; };
+		61141F39193DF88700475851 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		61141F3B193DF88700475851 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		61141F3D193DF88700475851 /* InfiniteScrollingExample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "InfiniteScrollingExample-Prefix.pch"; sourceTree = "<group>"; };
+		61141F3E193DF88700475851 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		61141F3F193DF88700475851 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		61141F41193DF88700475851 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		61141F47193DF88700475851 /* InfiniteScrollingExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InfiniteScrollingExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		61141F48193DF88700475851 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		61141F50193DF88700475851 /* InfiniteScrollingExampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "InfiniteScrollingExampleTests-Info.plist"; sourceTree = "<group>"; };
+		61141F52193DF88700475851 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		61141F54193DF88700475851 /* InfiniteScrollingExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InfiniteScrollingExampleTests.m; sourceTree = "<group>"; };
+		61141F5F193DF8FB00475851 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		61141F61193DF90700475851 /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		61141F62193DF90700475851 /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		61141F63193DF90700475851 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		61141F64193DF90700475851 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		61141F68193DF91800475851 /* UIScrollView+infiniteScrolling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+infiniteScrolling.h"; sourceTree = "<group>"; };
+		61141F69193DF91800475851 /* UIScrollView+infiniteScrolling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+infiniteScrolling.m"; sourceTree = "<group>"; };
+		61FF1B9D193E12E1003532E0 /* CCInfiniteScrolling.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = CCInfiniteScrolling.bundle; path = ../Resources/CCInfiniteScrolling.bundle; sourceTree = "<group>"; };
+		DA2E046B865343EDB424210D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		61141F29193DF88700475851 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61141F32193DF88700475851 /* CoreGraphics.framework in Frameworks */,
+				61141F34193DF88700475851 /* UIKit.framework in Frameworks */,
+				61141F30193DF88700475851 /* Foundation.framework in Frameworks */,
+				2F9303660FB64EDF92CE2D6C /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		61141F44193DF88700475851 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61141F49193DF88700475851 /* XCTest.framework in Frameworks */,
+				61141F4B193DF88700475851 /* UIKit.framework in Frameworks */,
+				61141F4A193DF88700475851 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		61141F23193DF88700475851 = {
+			isa = PBXGroup;
+			children = (
+				61141F67193DF91800475851 /* Classes */,
+				61141F35193DF88700475851 /* InfiniteScrollingExample */,
+				61141F4E193DF88700475851 /* InfiniteScrollingExampleTests */,
+				61141F2E193DF88700475851 /* Frameworks */,
+				61141F2D193DF88700475851 /* Products */,
+				32374C4429524554B1D5A36B /* Pods.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		61141F2D193DF88700475851 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				61141F2C193DF88700475851 /* InfiniteScrollingExample.app */,
+				61141F47193DF88700475851 /* InfiniteScrollingExampleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		61141F2E193DF88700475851 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				61141F2F193DF88700475851 /* Foundation.framework */,
+				61141F31193DF88700475851 /* CoreGraphics.framework */,
+				61141F33193DF88700475851 /* UIKit.framework */,
+				61141F48193DF88700475851 /* XCTest.framework */,
+				DA2E046B865343EDB424210D /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		61141F35193DF88700475851 /* InfiniteScrollingExample */ = {
+			isa = PBXGroup;
+			children = (
+				61141F61193DF90700475851 /* FirstViewController.h */,
+				61141F62193DF90700475851 /* FirstViewController.m */,
+				61141F63193DF90700475851 /* SecondViewController.h */,
+				61141F64193DF90700475851 /* SecondViewController.m */,
+				61141F3E193DF88700475851 /* AppDelegate.h */,
+				61141F3F193DF88700475851 /* AppDelegate.m */,
+				61141F41193DF88700475851 /* Images.xcassets */,
+				61141F5E193DF8FB00475851 /* Main.storyboard */,
+				61141F36193DF88700475851 /* Supporting Files */,
+			);
+			path = InfiniteScrollingExample;
+			sourceTree = "<group>";
+		};
+		61141F36193DF88700475851 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				61141F37193DF88700475851 /* InfiniteScrollingExample-Info.plist */,
+				61141F38193DF88700475851 /* InfoPlist.strings */,
+				61141F3B193DF88700475851 /* main.m */,
+				61141F3D193DF88700475851 /* InfiniteScrollingExample-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		61141F4E193DF88700475851 /* InfiniteScrollingExampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				61141F54193DF88700475851 /* InfiniteScrollingExampleTests.m */,
+				61141F4F193DF88700475851 /* Supporting Files */,
+			);
+			path = InfiniteScrollingExampleTests;
+			sourceTree = "<group>";
+		};
+		61141F4F193DF88700475851 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				61141F50193DF88700475851 /* InfiniteScrollingExampleTests-Info.plist */,
+				61141F51193DF88700475851 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		61141F67193DF91800475851 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				61141F68193DF91800475851 /* UIScrollView+infiniteScrolling.h */,
+				61141F69193DF91800475851 /* UIScrollView+infiniteScrolling.m */,
+				61FF1B9D193E12E1003532E0 /* CCInfiniteScrolling.bundle */,
+			);
+			name = Classes;
+			path = ../Classes;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		61141F2B193DF88700475851 /* InfiniteScrollingExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 61141F58193DF88700475851 /* Build configuration list for PBXNativeTarget "InfiniteScrollingExample" */;
+			buildPhases = (
+				7678C2B5F1FF40CB882E9C16 /* Check Pods Manifest.lock */,
+				61141F28193DF88700475851 /* Sources */,
+				61141F29193DF88700475851 /* Frameworks */,
+				61141F2A193DF88700475851 /* Resources */,
+				E369F779199D47B5BC5A7D0E /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = InfiniteScrollingExample;
+			productName = InfiniteScrollingExample;
+			productReference = 61141F2C193DF88700475851 /* InfiniteScrollingExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		61141F46193DF88700475851 /* InfiniteScrollingExampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 61141F5B193DF88700475851 /* Build configuration list for PBXNativeTarget "InfiniteScrollingExampleTests" */;
+			buildPhases = (
+				61141F43193DF88700475851 /* Sources */,
+				61141F44193DF88700475851 /* Frameworks */,
+				61141F45193DF88700475851 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				61141F4D193DF88700475851 /* PBXTargetDependency */,
+			);
+			name = InfiniteScrollingExampleTests;
+			productName = InfiniteScrollingExampleTests;
+			productReference = 61141F47193DF88700475851 /* InfiniteScrollingExampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		61141F24193DF88700475851 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = ziryanov;
+				TargetAttributes = {
+					61141F46193DF88700475851 = {
+						TestTargetID = 61141F2B193DF88700475851;
+					};
+				};
+			};
+			buildConfigurationList = 61141F27193DF88700475851 /* Build configuration list for PBXProject "InfiniteScrollingExample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 61141F23193DF88700475851;
+			productRefGroup = 61141F2D193DF88700475851 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				61141F2B193DF88700475851 /* InfiniteScrollingExample */,
+				61141F46193DF88700475851 /* InfiniteScrollingExampleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		61141F2A193DF88700475851 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61141F60193DF8FB00475851 /* Main.storyboard in Resources */,
+				61141F3A193DF88700475851 /* InfoPlist.strings in Resources */,
+				61141F42193DF88700475851 /* Images.xcassets in Resources */,
+				61FF1B9E193E12E1003532E0 /* CCInfiniteScrolling.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		61141F45193DF88700475851 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61141F53193DF88700475851 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7678C2B5F1FF40CB882E9C16 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E369F779199D47B5BC5A7D0E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		61141F28193DF88700475851 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61141F6A193DF91800475851 /* UIScrollView+infiniteScrolling.m in Sources */,
+				61141F66193DF90700475851 /* SecondViewController.m in Sources */,
+				61141F40193DF88700475851 /* AppDelegate.m in Sources */,
+				61141F65193DF90700475851 /* FirstViewController.m in Sources */,
+				61141F3C193DF88700475851 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		61141F43193DF88700475851 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61141F55193DF88700475851 /* InfiniteScrollingExampleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		61141F4D193DF88700475851 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 61141F2B193DF88700475851 /* InfiniteScrollingExample */;
+			targetProxy = 61141F4C193DF88700475851 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		61141F38193DF88700475851 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				61141F39193DF88700475851 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		61141F51193DF88700475851 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				61141F52193DF88700475851 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		61141F5E193DF8FB00475851 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				61141F5F193DF8FB00475851 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		61141F56193DF88700475851 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		61141F57193DF88700475851 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		61141F59193DF88700475851 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 32374C4429524554B1D5A36B /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "InfiniteScrollingExample/InfiniteScrollingExample-Prefix.pch";
+				INFOPLIST_FILE = "InfiniteScrollingExample/InfiniteScrollingExample-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		61141F5A193DF88700475851 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 32374C4429524554B1D5A36B /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "InfiniteScrollingExample/InfiniteScrollingExample-Prefix.pch";
+				INFOPLIST_FILE = "InfiniteScrollingExample/InfiniteScrollingExample-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		61141F5C193DF88700475851 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/InfiniteScrollingExample.app/InfiniteScrollingExample";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "InfiniteScrollingExample/InfiniteScrollingExample-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "InfiniteScrollingExampleTests/InfiniteScrollingExampleTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		61141F5D193DF88700475851 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/InfiniteScrollingExample.app/InfiniteScrollingExample";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "InfiniteScrollingExample/InfiniteScrollingExample-Prefix.pch";
+				INFOPLIST_FILE = "InfiniteScrollingExampleTests/InfiniteScrollingExampleTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		61141F27193DF88700475851 /* Build configuration list for PBXProject "InfiniteScrollingExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				61141F56193DF88700475851 /* Debug */,
+				61141F57193DF88700475851 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		61141F58193DF88700475851 /* Build configuration list for PBXNativeTarget "InfiniteScrollingExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				61141F59193DF88700475851 /* Debug */,
+				61141F5A193DF88700475851 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		61141F5B193DF88700475851 /* Build configuration list for PBXNativeTarget "InfiniteScrollingExampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				61141F5C193DF88700475851 /* Debug */,
+				61141F5D193DF88700475851 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 61141F24193DF88700475851 /* Project object */;
+}
