@@ -1,6 +1,6 @@
 # CCInfiniteScrolling
 
-These UIScrollView categories makes it super easy to add infinite scrolling functionalities to any UIScrollView (or any of its subclass). Instead of relying on delegates and/or subclassing `UIViewController`, CCInfiniteScrolling uses the Objective-C runtime to add the following 2 methods to `UIScrollView`:
+These UIScrollView categories makes it super easy to add infinite scrolling functionalities to any UIScrollView (or any of its' subclass). Instead of relying on delegates and/or subclassing `UIViewController`, CCInfiniteScrolling uses the Objective-C runtime to add the following 2 methods to `UIScrollView`:
 
 ```objective-c
 - (void)addTopInfiniteScrollingWithActionHandler:(void (^)())actonHandler;
@@ -31,9 +31,9 @@ pod 'CCKeyboardControl'
 
 ```objective-c
 [_tableView addBottomInfiniteScrollingWithActionHandler:^{
-    //this block will be trigger when user has been scrolled near to bottom of tableview;
-    //you can start load more request or smth
-    //simply call [_tableView reloadData] when your request finish
+    //this block will be triggered when user has scrolled to bottom of tableview;
+    //you can start "load more" request
+    //simply call [_tableView reloadData] when your request finishes
     }];
 ```
 
