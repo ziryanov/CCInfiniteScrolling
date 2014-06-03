@@ -22,12 +22,12 @@
     _numOfCells = 30;
     
     __weak SecondViewController *wself = self;
-    [_tableView addTopInfiniteScrollingWithActionHandler:^{
+    [_tableView addBottomInfiniteScrollingWithActionHandler:^{
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2. * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             wself.numOfCells += 30;
             if (wself.numOfCells >= 90)
                 wself.tableView.infiniteScrollingDisabled = YES;
-            [wself.tableView reloadDataKeepBottomOffset];
+            [wself.tableView reloadData];
         });
     }];
 }
@@ -35,18 +35,8 @@
 - (IBAction)refreshPressed
 {
     _numOfCells = 30;
-    [_tableView reloadData];
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [_tableView scrollToBottom];
-    });
     _tableView.infiniteScrollingDisabled = NO;
-}
-
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-    
-    [_tableView scrollToBottom];
+    [_tableView reloadData];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -57,7 +47,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
-    cell.textLabel.text = [NSString stringWithFormat:@"cell %d", (90 - _numOfCells) + (int)indexPath.row + 1];
+    cell.textLabel.text = [NSString stringWithFormat:@"cell %d", (int)indexPath.row + 1];
     return cell;
 }
 

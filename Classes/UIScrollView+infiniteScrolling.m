@@ -272,8 +272,10 @@ static UIImage *is_blockFailedImage = 0;
 
 - (void)setBottomInfiniteScrollingDisabled:(BOOL)bottomInfiniteScrollingDisabled
 {
+    CGFloat contentOffsetY = self.contentOffsetY;
     self.is_bottomDisabled = bottomInfiniteScrollingDisabled;
     [self is_updateContent];
+    self.contentOffsetY = contentOffsetY;
 }
 
 - (BOOL)bottomInfiniteScrollingDisabled
