@@ -7,11 +7,21 @@ These UIScrollView categories makes it super easy to add infinite scrolling func
 - (void)addBottomInfiniteScrollingWithActionHandler:(void (^)())actonHandler;
 ```
 
+![](https://github.com/ziryanov/CCInfiniteScrolling/raw/master/1.gif)
+
 ## Installation
 
-### From CocoaPods
+[CocoaPods](http://cocoapods.org) is the recommended way to add `CCKeyboardControl` to your project.
 
-Add `pod 'CCInfiniteScrolling'` to your Podfile.
+Here's an example **podfile** that installs `CCKeyboardControl`.
+
+###Podfile
+
+```ruby
+platform :ios, '6.0'
+
+pod 'CCKeyboardControl'
+```
 
 ## Usage
 
