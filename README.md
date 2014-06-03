@@ -8,7 +8,7 @@ These UIScrollView categories makes it super easy to add infinite scrolling func
 ```
 
 ![](https://github.com/ziryanov/CCInfiniteScrolling/raw/master/1.gif)
-
+![](https://github.com/ziryanov/CCInfiniteScrolling/raw/master/2.gif)
 ## Installation
 
 [CocoaPods](http://cocoapods.org) is the recommended way to add `CCKeyboardControl` to your project.
