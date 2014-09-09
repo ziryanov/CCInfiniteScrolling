@@ -114,6 +114,7 @@ static UIImage *is_blockFailedImage = 0;
     [self jr_swizzleMethod:@selector(setContentOffset:) withMethod:@selector(is_setContentOffset:) error:nil];
     [self jr_swizzleMethod:@selector(setContentSize:) withMethod:@selector(is_setContentSize:) error:nil];
     [self jr_swizzleMethod:@selector(setContentInset:) withMethod:@selector(is_setContentInset:) error:nil];
+    [self jr_swizzleMethod:@selector(contentInset) withMethod:@selector(is_ContentInset) error:nil];
 }
 
 - (void)infiniteScrollViewContentUpdated
@@ -170,6 +171,11 @@ static UIImage *is_blockFailedImage = 0;
 {
     self.is_contentInset = [NSValue valueWithUIEdgeInsets:contentInset];
     [self is_updateContent];
+}
+
+- (UIEdgeInsets)is_ContentInset
+{
+    return [self.is_contentInset UIEdgeInsetsValue];
 }
 
 - (void)is_setContentSize:(CGSize)contentSize
@@ -261,7 +267,7 @@ static UIImage *is_blockFailedImage = 0;
     CGFloat contentOffsetY = self.contentOffsetY;
     CGFloat contentHeight = self.contentHeight;
     self.is_topDisabled = topInfiniteScrollingDisabled;
-    [self performSelector:@selector(is_updateContent)];
+    [self is_updateContent];
     self.contentOffsetY = contentOffsetY + (self.contentHeight - contentHeight);
 }
 
@@ -272,10 +278,8 @@ static UIImage *is_blockFailedImage = 0;
 
 - (void)setBottomInfiniteScrollingDisabled:(BOOL)bottomInfiniteScrollingDisabled
 {
-    CGFloat contentOffsetY = self.contentOffsetY;
     self.is_bottomDisabled = bottomInfiniteScrollingDisabled;
     [self is_updateContent];
-    self.contentOffsetY = contentOffsetY;
 }
 
 - (BOOL)bottomInfiniteScrollingDisabled
