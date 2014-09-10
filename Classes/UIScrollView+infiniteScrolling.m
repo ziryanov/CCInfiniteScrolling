@@ -30,8 +30,10 @@ static UIImage *is_blockFailedImage = 0;
 
 @property (nonatomic) BOOL is_topBlockInProgress;
 @property (nonatomic) BOOL is_topDisabled;
+@property (nonatomic) BOOL is_topUndisablingInProgress;
 @property (nonatomic) BOOL is_bottomBlockInProgress;
 @property (nonatomic) BOOL is_bottomDisabled;
+@property (nonatomic) BOOL is_bottomUndisablingInProgress;
 
 @property (nonatomic) NSValue *is_contentSize;
 @property (nonatomic) NSValue *is_contentInset;
@@ -44,8 +46,8 @@ static UIImage *is_blockFailedImage = 0;
 //--------------------------------------------------------------------------------------------------------------------------------------------
 
 @implementation UIScrollView (infiniteScrollingPrivate)
-@dynamic is_topBlock, is_topBlockInProgress, is_topDisabled, is_topBox;
-@dynamic is_bottomBlock, is_bottomBlockInProgress, is_bottomDisabled, is_bottomBox;
+@dynamic is_topBlock, is_topBlockInProgress, is_topDisabled, is_topBox, is_topUndisablingInProgress;
+@dynamic is_bottomBlock, is_bottomBlockInProgress, is_bottomDisabled, is_bottomBox, is_bottomUndisablingInProgress;
 @dynamic is_contentSize, is_contentInset;
 @end
 
@@ -148,8 +150,12 @@ static UIImage *is_blockFailedImage = 0;
     if ([self is_checkContentOffset:0])
     {
         double delayInSeconds = .05;
+        if (self.is_topUndisablingInProgress || self.is_bottomUndisablingInProgress)
+            delayInSeconds = .5;
         dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
         dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+            if (self.is_topUndisablingInProgress || self.is_bottomUndisablingInProgress)
+                return;
             BOOL top;
             if (![self is_checkContentOffset:&top])
                 return;
@@ -264,6 +270,13 @@ static UIImage *is_blockFailedImage = 0;
 
 - (void)setTopInfiniteScrollingDisabled:(BOOL)topInfiniteScrollingDisabled
 {
+    if (self.is_topDisabled && !topInfiniteScrollingDisabled)
+    {
+        self.is_topUndisablingInProgress = YES;
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            self.is_topUndisablingInProgress = NO;
+        });
+    }
     CGFloat contentOffsetY = self.contentOffsetY;
     CGFloat contentHeight = self.contentHeight;
     self.is_topDisabled = topInfiniteScrollingDisabled;
@@ -278,6 +291,13 @@ static UIImage *is_blockFailedImage = 0;
 
 - (void)setBottomInfiniteScrollingDisabled:(BOOL)bottomInfiniteScrollingDisabled
 {
+    if (self.is_bottomDisabled && !bottomInfiniteScrollingDisabled)
+    {
+        self.is_bottomUndisablingInProgress = YES;
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            self.is_bottomUndisablingInProgress = NO;
+        });
+    }
     self.is_bottomDisabled = bottomInfiniteScrollingDisabled;
     [self is_updateContent];
 }
