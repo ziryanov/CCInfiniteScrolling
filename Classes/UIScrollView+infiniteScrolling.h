@@ -47,7 +47,11 @@
 /// Change button image in all infiniteScrollingCustomFailedViews
 + (void)setInfinityScrollingCustomBlockFailedImage:(UIImage *)image;
 
+/// Default trigger offset is (self.height)
+@property (nonatomic) CGFloat infinityScrollingTriggerOffset;
 
+/// Change infinityScrollingTriggerOffset in all scrollViews
++ (void)setInfinityScrollingTriggerOffset:(CGFloat)triggerOffset;
 
 //---------------------------------------------------------------------------------------
 // Use these methods only if you want use top and bottom infinity scrolling simultaneously

@@ -39,6 +39,7 @@ NSUInteger maxOfCells = 140;
 {
     [super viewDidLoad];
 
+    [UIScrollView setInfinityScrollingTriggerOffset:100];
     [self refreshPressed];
     [self setupLoadMore];
 }
@@ -83,7 +84,7 @@ NSUInteger maxOfCells = 140;
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
-    ((UILabel *)[cell viewWithTag:1]).text = [NSString stringWithFormat:@"cell %d", _cellOffset + (int)indexPath.row + 1];
+    ((UILabel *)[cell viewWithTag:1]).text = [NSString stringWithFormat:@"cell %d", (int)_cellOffset + (int)indexPath.row + 1];
     return cell;
 }
 

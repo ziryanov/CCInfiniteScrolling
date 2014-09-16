@@ -22,6 +22,7 @@
 @end
 
 static UIImage *is_blockFailedImage = 0;
+static CGFloat is_infinityScrollingTriggerOffset = 0;
 
 @interface UIScrollView (infiniteScrollingPrivate)
 
@@ -55,13 +56,18 @@ static UIImage *is_blockFailedImage = 0;
 
 @implementation UIScrollView (infiniteScrolling)
 @dynamic infiniteScrollingCustomView, infiniteScrollingCustomFailedView;
-@dynamic infiniteScrollingDisabled, infiniteScrollingBlockFailed;
+@dynamic infiniteScrollingDisabled, infiniteScrollingBlockFailed, infinityScrollingTriggerOffset;
 @dynamic topInfiniteScrollingCustomView, topInfiniteScrollingCustomFailedView;
 @dynamic bottomInfiniteScrollingCustomView, bottomInfiniteScrollingCustomFailedView;
 
 + (void)setInfinityScrollingCustomBlockFailedImage:(UIImage *)image
 {
     is_blockFailedImage = image;
+}
+
++ (void)setInfinityScrollingTriggerOffset:(CGFloat)triggerOffset
+{
+    is_infinityScrollingTriggerOffset = triggerOffset;
 }
 
 - (UIView *)is_createDefaultInfiniteScrollingView 
@@ -125,13 +131,18 @@ static UIImage *is_blockFailedImage = 0;
     self.is_bottomBlockInProgress = NO;
 }
 
+- (CGFloat)is_infinityScrollingTriggerOffset
+{
+    return self.infinityScrollingTriggerOffset ?: (is_infinityScrollingTriggerOffset ?: self.height);
+}
+
 - (BOOL)is_checkContentOffset:(BOOL *)top
 {
     if (top)
-        *top = self.is_topBlock != 0 && self.contentOffsetY < .75 * self.height;
+        *top = self.is_topBlock != 0 && self.contentOffsetY < self.is_infinityScrollingTriggerOffset;
     
-    return (self.is_bottomBlock != 0 && self.contentOffsetY > self.contentHeight - 2 * self.height) ||
-           (self.is_topBlock != 0 && self.contentOffsetY < .75 * self.height);
+    return (self.is_bottomBlock != 0 && self.contentOffsetY > self.contentHeight - self.height - self.is_infinityScrollingTriggerOffset) ||
+           (self.is_topBlock != 0 && self.contentOffsetY < self.is_infinityScrollingTriggerOffset);
 }
 
 - (void)is_setContentOffset:(CGPoint)contentOffset

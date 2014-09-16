@@ -21,6 +21,7 @@
     [super viewDidLoad];
     _numOfCells = 30;
     
+    [self.tableView setInfinityScrollingTriggerOffset:500];
     __weak SecondViewController *wself = self;
     [_tableView addBottomInfiniteScrollingWithActionHandler:^{
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2. * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
