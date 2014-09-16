@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "CCInfiniteScrolling"
-  s.version      = "0.2.1"
+  s.version      = "0.3"
   s.summary      = "These UIScrollView categories makes it super easy to add infinite scrolling functionalities to any UIScrollView"
   s.description  = "These UIScrollView categories makes it super easy to add infinite scrolling functionalities to any UIScrollView (or any of its subclass)"
   s.homepage     = "https://github.com/ziryanov/CCInfiniteScrolling"
