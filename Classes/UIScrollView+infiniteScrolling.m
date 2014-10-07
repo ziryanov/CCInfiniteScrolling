@@ -155,7 +155,7 @@ static CGFloat is_infinityScrollingTriggerOffset = 0;
     if (!blocksEnabled)
         return;
 
-    if (!self.height || self.contentSize.height <= self.height)
+    if (!self.height || self.contentHeight <= self.height - self.contentInsetTop - self.contentInsetBottom)
         return;
     
     if ([self is_checkContentOffset:0])
@@ -382,7 +382,7 @@ static CGFloat is_infinityScrollingTriggerOffset = 0;
 
 - (void)scrollToBottom
 {
-    self.contentOffsetY = MAX(-self.contentInsetTop, self.contentInsetBottom + self.contentSize.height - self.height);
+    self.contentOffsetY = MAX(-self.contentInsetTop, self.contentInsetBottom + self.contentHeight - self.height);
 }
 
 @end
