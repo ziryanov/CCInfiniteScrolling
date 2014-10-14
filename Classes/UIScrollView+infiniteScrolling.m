@@ -121,6 +121,7 @@ static CGFloat is_infinityScrollingTriggerOffset = 0;
 {
     [self jr_swizzleMethod:@selector(setContentOffset:) withMethod:@selector(is_setContentOffset:) error:nil];
     [self jr_swizzleMethod:@selector(setContentSize:) withMethod:@selector(is_setContentSize:) error:nil];
+    [self jr_swizzleMethod:@selector(contentSize) withMethod:@selector(is_ContentSize) error:nil];
     [self jr_swizzleMethod:@selector(setContentInset:) withMethod:@selector(is_setContentInset:) error:nil];
     [self jr_swizzleMethod:@selector(contentInset) withMethod:@selector(is_ContentInset) error:nil];
 }
@@ -199,6 +200,11 @@ static CGFloat is_infinityScrollingTriggerOffset = 0;
 {
     self.is_contentSize = [NSValue valueWithCGSize:contentSize];
     [self is_updateContent];
+}
+
+- (CGSize)is_ContentSize
+{
+    return [self.is_contentSize CGSizeValue];
 }
 
 - (void)is_updateContent

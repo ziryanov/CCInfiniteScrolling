@@ -21,7 +21,8 @@
     [super viewDidLoad];
     _numOfCells = 30;
     
-    [self.tableView setInfinityScrollingTriggerOffset:500];
+    _tableView.estimatedRowHeight = _tableView.rowHeight;
+    [_tableView setInfinityScrollingTriggerOffset:500];
     __weak SecondViewController *wself = self;
     [_tableView addBottomInfiniteScrollingWithActionHandler:^{
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2. * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
@@ -38,6 +39,11 @@
     _numOfCells = 30;
     _tableView.infiniteScrollingDisabled = NO;
     [_tableView reloadData];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return _tableView.rowHeight;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
