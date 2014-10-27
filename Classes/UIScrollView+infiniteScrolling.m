@@ -139,11 +139,19 @@ static CGFloat is_infinityScrollingTriggerOffset = 0;
 
 - (BOOL)is_checkContentOffset:(BOOL *)top
 {
+    if ([self is_checkForEmptyContent])
+        return NO;
+    CGFloat infinityScrollingTriggerOffset = MIN(self.is_infinityScrollingTriggerOffset, self.contentHeight - self.is_infinityScrollingTriggerOffset);
     if (top)
-        *top = self.is_topBlock != 0 && self.contentOffsetY < self.is_infinityScrollingTriggerOffset;
+        *top = self.is_topBlock != 0 && self.contentOffsetY < infinityScrollingTriggerOffset;
     
-    return (self.is_bottomBlock != 0 && self.contentOffsetY > self.contentHeight - self.height - self.is_infinityScrollingTriggerOffset) ||
-           (self.is_topBlock != 0 && self.contentOffsetY < self.is_infinityScrollingTriggerOffset);
+    return (self.is_bottomBlock != 0 && self.contentOffsetY > self.contentHeight - self.height - infinityScrollingTriggerOffset) ||
+    (self.is_topBlock != 0 && self.contentOffsetY < infinityScrollingTriggerOffset);
+}
+
+- (BOOL)is_checkForEmptyContent
+{
+    return (self.height == 0 || self.contentHeight <= self.height - self.contentInsetTop - self.contentInsetBottom);
 }
 
 - (void)is_setContentOffset:(CGPoint)contentOffset
@@ -152,11 +160,11 @@ static CGFloat is_infinityScrollingTriggerOffset = 0;
     if (!self.is_topBlock && !self.is_bottomBlock)
         return;
     BOOL blocksEnabled = (self.is_topBlock != 0 && !self.topInfiniteScrollingDisabled) ||
-                         (self.is_bottomBlock != 0 && !self.bottomInfiniteScrollingDisabled);
+    (self.is_bottomBlock != 0 && !self.bottomInfiniteScrollingDisabled);
     if (!blocksEnabled)
         return;
-
-    if (!self.height || self.contentHeight <= self.height - self.contentInsetTop - self.contentInsetBottom)
+    
+    if ([self is_checkForEmptyContent])
         return;
     
     if ([self is_checkContentOffset:0])
@@ -214,7 +222,7 @@ static CGFloat is_infinityScrollingTriggerOffset = 0;
     
     BOOL topISViewVisible = self.is_topBlock != 0 && !self.topInfiniteScrollingDisabled && contentSize.height > self.height;
     BOOL bottomISViewVisible = self.is_bottomBlock != 0 && !self.bottomInfiniteScrollingDisabled && contentSize.height > self.height;
-
+    
     if (topISViewVisible)
     {
         contentInset.top += self.is_topBox.height;
