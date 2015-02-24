@@ -90,7 +90,10 @@ static CGFloat is_infinityScrollingTriggerOffset = 0;
     if (!self.infiniteScrollingCustomView)
         self.infiniteScrollingCustomView = self.topInfiniteScrollingCustomView;
     if (!self.is_topBox)
+    {
         self.is_topBox = [[UIView alloc] initWithFrame:self.topInfiniteScrollingCustomView.bounds];
+        self.is_topBox.xCenter = self.width / 2;
+    }
     
     [self.is_topBox is_removeAllSubviews];
     
@@ -107,7 +110,10 @@ static CGFloat is_infinityScrollingTriggerOffset = 0;
     if (!self.infiniteScrollingCustomView)
         self.infiniteScrollingCustomView = self.bottomInfiniteScrollingCustomView;
     if (!self.is_bottomBox)
+    {
         self.is_bottomBox = [[UIView alloc] initWithFrame:self.bottomInfiniteScrollingCustomView.bounds];
+        self.is_bottomBox.xCenter = self.width / 2;
+    }
 
     [self.is_bottomBox is_removeAllSubviews];
     
@@ -339,11 +345,13 @@ static CGFloat is_infinityScrollingTriggerOffset = 0;
     UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 44)];
     view.backgroundColor = [UIColor clearColor];
     UIButton *button = [[UIButton alloc] initWithFrame:view.bounds];
+    button.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin;
     [button setImage:is_blockFailedImage ?: [UIImage imageNamed:@"CCInfiniteScrolling.bundle/infinite_scrolling_reload"] forState:UIControlStateNormal];
     [button addTarget:self action:(top ? @selector(topAction) : @selector(bottomAction)) forControlEvents:UIControlEventTouchUpInside];
     [view addSubview:button];
     return view;
 }
+
 - (void)topAction
 {
     self.topInfiniteScrollingBlockFailed = NO;
