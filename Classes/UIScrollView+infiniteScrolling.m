@@ -86,7 +86,7 @@ static CGFloat is_infinityScrollingTriggerOffset = 0;
     self.is_topBlock = actonHandler;
     
     if (!self.topInfiniteScrollingCustomView)
-        self.topInfiniteScrollingCustomView = self.infiniteScrollingCustomView ?: [self is_createDefaultInfiniteScrollingView ];
+        self.topInfiniteScrollingCustomView = self.infiniteScrollingCustomView ?: [self is_createDefaultInfiniteScrollingView];
     if (!self.infiniteScrollingCustomView)
         self.infiniteScrollingCustomView = self.topInfiniteScrollingCustomView;
     if (!self.is_topBox)
@@ -106,14 +106,11 @@ static CGFloat is_infinityScrollingTriggerOffset = 0;
     self.is_bottomBlock = actonHandler;
     
     if (!self.bottomInfiniteScrollingCustomView)
-        self.bottomInfiniteScrollingCustomView = self.infiniteScrollingCustomView ?: [self is_createDefaultInfiniteScrollingView ];
+        self.bottomInfiniteScrollingCustomView = self.infiniteScrollingCustomView ?: [self is_createDefaultInfiniteScrollingView];
     if (!self.infiniteScrollingCustomView)
         self.infiniteScrollingCustomView = self.bottomInfiniteScrollingCustomView;
     if (!self.is_bottomBox)
-    {
         self.is_bottomBox = [[UIView alloc] initWithFrame:self.bottomInfiniteScrollingCustomView.bounds];
-        self.is_bottomBox.xCenter = self.width / 2;
-    }
 
     [self.is_bottomBox is_removeAllSubviews];
     
@@ -234,7 +231,10 @@ static CGFloat is_infinityScrollingTriggerOffset = 0;
         contentInset.top += self.is_topBox.height;
         
         if (!self.is_topBox.superview)
+        {
             [self addSubview:self.is_topBox];
+            self.is_topBox.xCenter = self.width / 2;
+        }
         self.is_topBox.maxY = 0;
     }
     else
@@ -248,7 +248,10 @@ static CGFloat is_infinityScrollingTriggerOffset = 0;
         contentSize.height += self.is_bottomBox.height;
         
         if (!self.is_bottomBox.superview)
+        {
             [self addSubview:self.is_bottomBox];
+            self.is_bottomBox.xCenter = self.width / 2;
+        }
         self.is_bottomBox.maxY = contentSize.height;
     }
     else
