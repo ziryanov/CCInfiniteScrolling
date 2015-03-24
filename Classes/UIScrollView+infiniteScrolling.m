@@ -90,15 +90,11 @@ static CGFloat is_infinityScrollingTriggerOffset = 0;
     if (!self.infiniteScrollingCustomView)
         self.infiniteScrollingCustomView = self.topInfiniteScrollingCustomView;
     if (!self.is_topBox)
-    {
-        self.is_topBox = [[UIView alloc] initWithFrame:self.topInfiniteScrollingCustomView.bounds];
-        self.is_topBox.xCenter = self.width / 2;
-    }
+        self.is_topBox = [[UIView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, self.topInfiniteScrollingCustomView.height)];
     
     [self.is_topBox is_removeAllSubviews];
     
-    self.topInfiniteScrollingCustomView.translatesAutoresizingMaskIntoConstraints = YES;
-    [self.is_topBox addSubview:self.topInfiniteScrollingCustomView];
+    [self addView:self.topInfiniteScrollingCustomView toView:self.is_topBox];
 }
 
 - (void)addBottomInfiniteScrollingWithActionHandler:(void (^)())actonHandler
@@ -110,12 +106,11 @@ static CGFloat is_infinityScrollingTriggerOffset = 0;
     if (!self.infiniteScrollingCustomView)
         self.infiniteScrollingCustomView = self.bottomInfiniteScrollingCustomView;
     if (!self.is_bottomBox)
-        self.is_bottomBox = [[UIView alloc] initWithFrame:self.bottomInfiniteScrollingCustomView.bounds];
-
+        self.is_bottomBox = [[UIView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, self.bottomInfiniteScrollingCustomView.height)];
+    
     [self.is_bottomBox is_removeAllSubviews];
     
-    self.bottomInfiniteScrollingCustomView.translatesAutoresizingMaskIntoConstraints = YES;
-    [self.is_bottomBox addSubview:self.bottomInfiniteScrollingCustomView];
+    [self addView:self.bottomInfiniteScrollingCustomView toView:self.is_bottomBox];
 }
 
 //---------------------------------------------------------------------------------------------------------
@@ -231,10 +226,7 @@ static CGFloat is_infinityScrollingTriggerOffset = 0;
         contentInset.top += self.is_topBox.height;
         
         if (!self.is_topBox.superview)
-        {
             [self addSubview:self.is_topBox];
-            self.is_topBox.xCenter = self.width / 2;
-        }
         self.is_topBox.maxY = 0;
     }
     else
@@ -248,10 +240,7 @@ static CGFloat is_infinityScrollingTriggerOffset = 0;
         contentSize.height += self.is_bottomBox.height;
         
         if (!self.is_bottomBox.superview)
-        {
             [self addSubview:self.is_bottomBox];
-            self.is_bottomBox.xCenter = self.width / 2;
-        }
         self.is_bottomBox.maxY = contentSize.height;
     }
     else
@@ -348,10 +337,9 @@ static CGFloat is_infinityScrollingTriggerOffset = 0;
     UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 44)];
     view.backgroundColor = [UIColor clearColor];
     UIButton *button = [[UIButton alloc] initWithFrame:view.bounds];
-    button.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin;
     [button setImage:is_blockFailedImage ?: [UIImage imageNamed:@"CCInfiniteScrolling.bundle/infinite_scrolling_reload"] forState:UIControlStateNormal];
     [button addTarget:self action:(top ? @selector(topAction) : @selector(bottomAction)) forControlEvents:UIControlEventTouchUpInside];
-    [view addSubview:button];
+    [self addView:button toView:view];
     return view;
 }
 
@@ -371,7 +359,8 @@ static CGFloat is_infinityScrollingTriggerOffset = 0;
 {
     [superview is_removeAllSubviews];
     viewToAdd.translatesAutoresizingMaskIntoConstraints = YES;
-    viewToAdd.frame = superview.bounds;
+    viewToAdd.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin;
+    viewToAdd.xCenter = superview.width / 2;
     [superview addSubview:viewToAdd];
 }
 
