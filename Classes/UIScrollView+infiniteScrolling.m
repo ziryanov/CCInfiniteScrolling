@@ -7,8 +7,8 @@
 //
 
 #import "UIScrollView+infiniteScrolling.h"
-#import <UIView+TKGeometry.h>
-#import <JRSwizzle.h>
+#import <UIView+TKGeometry/UIView+TKGeometry.h>
+#import <JRSwizzle/JRSwizzle.h>
 #import <objc/runtime.h>
 
 @implementation UIView (infiniteScrollRemoveAllSubviews)
