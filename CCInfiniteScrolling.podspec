@@ -14,5 +14,4 @@ Pod::Spec.new do |s|
   s.resources    = 'Resources/CCInfiniteScrolling.bundle'
   s.dependency 'UIView+TKGeometry'
   s.dependency 'JRSwizzle'
-  s.dependency 'DProperty'
 end

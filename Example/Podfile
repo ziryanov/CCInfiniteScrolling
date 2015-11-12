@@ -2,4 +2,3 @@ platform :ios, "6.0"
 
 pod 'UIView+TKGeometry'
 pod 'JRSwizzle'
-pod 'DProperty'
