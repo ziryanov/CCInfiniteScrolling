@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2F9303660FB64EDF92CE2D6C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DA2E046B865343EDB424210D /* libPods.a */; };
-		61068C481BF4F5BD002FA96A /* DPPPropertyAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 61068C451BF4F5BD002FA96A /* DPPPropertyAttribute.m */; };
-		61068C491BF4F5BD002FA96A /* NSObject+DProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = 61068C471BF4F5BD002FA96A /* NSObject+DProperty.m */; };
 		61141F30193DF88700475851 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61141F2F193DF88700475851 /* Foundation.framework */; };
 		61141F32193DF88700475851 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61141F31193DF88700475851 /* CoreGraphics.framework */; };
 		61141F34193DF88700475851 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61141F33193DF88700475851 /* UIKit.framework */; };
@@ -25,8 +23,6 @@
 		61141F60193DF8FB00475851 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61141F5E193DF8FB00475851 /* Main.storyboard */; };
 		61141F65193DF90700475851 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61141F62193DF90700475851 /* FirstViewController.m */; };
 		61141F66193DF90700475851 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61141F64193DF90700475851 /* SecondViewController.m */; };
-		61141F6A193DF91800475851 /* UIScrollView+infiniteScrolling.m in Sources */ = {isa = PBXBuildFile; fileRef = 61141F69193DF91800475851 /* UIScrollView+infiniteScrolling.m */; };
-		61FF1B9E193E12E1003532E0 /* CCInfiniteScrolling.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 61FF1B9D193E12E1003532E0 /* CCInfiniteScrolling.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,10 +37,6 @@
 
 /* Begin PBXFileReference section */
 		147483E2EEE65EA1E39AF6BE /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		61068C441BF4F5BD002FA96A /* DPPPropertyAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DPPPropertyAttribute.h; sourceTree = "<group>"; };
-		61068C451BF4F5BD002FA96A /* DPPPropertyAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DPPPropertyAttribute.m; sourceTree = "<group>"; };
-		61068C461BF4F5BD002FA96A /* NSObject+DProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+DProperty.h"; sourceTree = "<group>"; };
-		61068C471BF4F5BD002FA96A /* NSObject+DProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+DProperty.m"; sourceTree = "<group>"; };
 		61141F2C193DF88700475851 /* InfiniteScrollingExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InfiniteScrollingExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61141F2F193DF88700475851 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		61141F31193DF88700475851 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -66,9 +58,6 @@
 		61141F62193DF90700475851 /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		61141F63193DF90700475851 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		61141F64193DF90700475851 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
-		61141F68193DF91800475851 /* UIScrollView+infiniteScrolling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+infiniteScrolling.h"; sourceTree = "<group>"; };
-		61141F69193DF91800475851 /* UIScrollView+infiniteScrolling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+infiniteScrolling.m"; sourceTree = "<group>"; };
-		61FF1B9D193E12E1003532E0 /* CCInfiniteScrolling.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = CCInfiniteScrolling.bundle; path = ../Resources/CCInfiniteScrolling.bundle; sourceTree = "<group>"; };
 		BE2DE9146FC84DED829B9A4B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		DA2E046B865343EDB424210D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -110,7 +99,6 @@
 		61141F23193DF88700475851 = {
 			isa = PBXGroup;
 			children = (
-				61141F67193DF91800475851 /* Classes */,
 				61141F35193DF88700475851 /* InfiniteScrollingExample */,
 				61141F4E193DF88700475851 /* InfiniteScrollingExampleTests */,
 				61141F2E193DF88700475851 /* Frameworks */,
@@ -185,21 +173,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		61141F67193DF91800475851 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				61068C441BF4F5BD002FA96A /* DPPPropertyAttribute.h */,
-				61068C451BF4F5BD002FA96A /* DPPPropertyAttribute.m */,
-				61068C461BF4F5BD002FA96A /* NSObject+DProperty.h */,
-				61068C471BF4F5BD002FA96A /* NSObject+DProperty.m */,
-				61141F68193DF91800475851 /* UIScrollView+infiniteScrolling.h */,
-				61141F69193DF91800475851 /* UIScrollView+infiniteScrolling.m */,
-				61FF1B9D193E12E1003532E0 /* CCInfiniteScrolling.bundle */,
-			);
-			name = Classes;
-			path = ../Classes;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -212,6 +185,7 @@
 				61141F29193DF88700475851 /* Frameworks */,
 				61141F2A193DF88700475851 /* Resources */,
 				E369F779199D47B5BC5A7D0E /* Copy Pods Resources */,
+				3B388EC5DB7A14B2F82E6B30 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -281,7 +255,6 @@
 				61141F60193DF8FB00475851 /* Main.storyboard in Resources */,
 				61141F3A193DF88700475851 /* InfoPlist.strings in Resources */,
 				61141F42193DF88700475851 /* Images.xcassets in Resources */,
-				61FF1B9E193E12E1003532E0 /* CCInfiniteScrolling.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,6 +269,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		3B388EC5DB7A14B2F82E6B30 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		7678C2B5F1FF40CB882E9C16 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -333,10 +321,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				61141F6A193DF91800475851 /* UIScrollView+infiniteScrolling.m in Sources */,
 				61141F66193DF90700475851 /* SecondViewController.m in Sources */,
-				61068C491BF4F5BD002FA96A /* NSObject+DProperty.m in Sources */,
-				61068C481BF4F5BD002FA96A /* DPPPropertyAttribute.m in Sources */,
 				61141F40193DF88700475851 /* AppDelegate.m in Sources */,
 				61141F65193DF90700475851 /* FirstViewController.m in Sources */,
 				61141F3C193DF88700475851 /* main.m in Sources */,

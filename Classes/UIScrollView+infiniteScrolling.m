@@ -9,8 +9,8 @@
 #import "UIScrollView+infiniteScrolling.h"
 #import <JRSwizzle/JRSwizzle.h>
 #import <objc/runtime.h>
-
-@import UIView_TKGeometry;
+#import "UIView+TKGeometry.h"
+#import "DPPPropertyAttribute.h"
 
 @implementation UIView (infiniteScrollRemoveAllSubviews)
 
@@ -338,7 +338,13 @@ static CGFloat is_infinityScrollingTriggerOffset = 0;
     UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 44)];
     view.backgroundColor = [UIColor clearColor];
     UIButton *button = [[UIButton alloc] initWithFrame:view.bounds];
-    [button setImage:is_blockFailedImage ?: [UIImage imageNamed:@"CCInfiniteScrolling.bundle/infinite_scrolling_reload"] forState:UIControlStateNormal];
+    static UIImage *podImage;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        NSBundle *podBundle = [NSBundle bundleForClass:DPPPropertyAttribute.class];
+        podImage = [UIImage imageNamed:@"CCInfiniteScrolling.bundle/infinite_scrolling_reload" inBundle:podBundle compatibleWithTraitCollection:nil];
+    });
+    [button setImage:is_blockFailedImage ?: podImage forState:UIControlStateNormal];
     [button addTarget:self action:(top ? @selector(topAction) : @selector(bottomAction)) forControlEvents:UIControlEventTouchUpInside];
     [self addView:button toView:view];
     return view;

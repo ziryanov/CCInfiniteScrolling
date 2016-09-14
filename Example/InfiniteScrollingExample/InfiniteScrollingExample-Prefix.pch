@@ -16,4 +16,4 @@
 #endif
 
 #import <UIView+TKGeometry.h>
-#import "UIScrollView+infiniteScrolling.h"
+#import <UIScrollView+infiniteScrolling.h>

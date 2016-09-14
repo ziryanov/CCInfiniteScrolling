@@ -7,7 +7,6 @@ PODS:
 
 DEPENDENCIES:
   - CCInfiniteScrolling
-  - UIView+TKGeometry
 
 SPEC CHECKSUMS:
   CCInfiniteScrolling: 54e0d467842b889a5a0cdb3978b22f319148561c
