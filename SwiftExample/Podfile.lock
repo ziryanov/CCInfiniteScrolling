@@ -1,5 +1,5 @@
 PODS:
-  - CCInfiniteScrolling (0.5.4):
+  - CCInfiniteScrolling (0.6):
     - JRSwizzle
     - UIView+TKGeometry
   - JRSwizzle (1.0)
@@ -9,7 +9,7 @@ DEPENDENCIES:
   - CCInfiniteScrolling
 
 SPEC CHECKSUMS:
-  CCInfiniteScrolling: 54e0d467842b889a5a0cdb3978b22f319148561c
+  CCInfiniteScrolling: 6e775003d7fd30c15d73338ee0bdb2db18ca0659
   JRSwizzle: dd5ead5d913a0f29e7f558200165849f006bb1e3
   UIView+TKGeometry: bef0d7727753910d66d6fa51a3128ae6908047ef
 
